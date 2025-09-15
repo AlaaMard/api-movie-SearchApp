@@ -45,7 +45,7 @@ function MovieSearch() {
   };
 
     
-    const API_KEY='1c538ea6';
+    const API_KEY=import.meta.env.VITE_OMDB_API_KEY;
     const API_URL=`https://www.omdbapi.com/?apikey=${API_KEY}`;
     const fetchMovies = async (query) => {
         setLoading(true);
