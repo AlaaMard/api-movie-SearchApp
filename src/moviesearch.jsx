@@ -54,7 +54,8 @@ function MovieSearch() {
         try {
            
             const response = await 
-            Axios.get(`${API_URL}&s=${query}`);
+            Axios.get(`/api/movies?q=${query}`)
+
             if (response.data.Response === "True") {
                 setMovies(response.data.Search);
             } else {
